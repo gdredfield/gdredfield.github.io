@@ -11,20 +11,34 @@ body {
 body::before {
   content: "";
   position: fixed;
-  background: #040404 url("../img/bg.jpg") top right -28px no-repeat;
+  background: #040404 url("../img/suit3.jpg") top right -38px no-repeat;
   background-size: cover;
-  /* background: rgba(0,0,0,0.6)url('../img/bg.jpg');
-  background-size: contain;
-  background-blend-mode: darken; */
+  /*background: rgba(0,0,0,0.6)url('../img/bg.jpg'); */
+  /* background: linear-gradient(to right, black 30%, transparent 70%),
+            rgba(0,0,0,0.6)url("../img/suit3.jpg") top right -55px no-repeat; */
+  /* background-repeat: no-repeat;
+  background-size: cover; */
+  /* background-repeat: no-repeat;
+  background-size: 100% 100%, contain; */
+  /* background-size: contain; */
+  /* background-blend-mode: darken; */
   left: 0;
   right: 0;
   top: 0;
   height: 100vh;
   z-index: -1;
 }
+
 @media (min-width: 1024px) {
   body::before {
     background-attachment: fixed;
+  }
+}
+
+@media (max-width: 768px) {
+  body::before {
+    background-attachment: fixed;
+    background: #040404 url("../img/suit3.jpg") top right -40px no-repeat;
   }
 }
 
@@ -455,6 +469,13 @@ section .container {
   padding-right: 10px;
   line-height: 1;
 }
+.interests .icon-box img {
+  font-size: 32px;
+  padding-right: 10px;
+  line-height: 1;
+  width: 45px;
+  height: auto;
+}
 .interests .icon-box h3 {
   font-weight: 700;
   margin: 0;
@@ -474,6 +495,18 @@ section .container {
   transition: transform 0.5s ease 0s;
 }
 
+.interests .icon-box:hover img{
+  transform: rotate(360deg);
+  transition: transform 0.5s ease 0s;
+}
+
+@media (max-width: 720px) {
+  .interests .icon-box img {
+    width: 40px;
+    height: auto;
+  }
+
+}
 
 
 /*--------------------------------------------------------------
